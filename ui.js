@@ -30,7 +30,7 @@ Ext.onReady(function() {
 
 	// パネルを作成
 	var inputPanel = new Ext.Panel({
-		title : 'DML Breaker 2.0',
+		title : 'DML Breaker -  2.02',
 		collapsible: true,
 		height: 200,
 		layout:'fit',
@@ -95,7 +95,7 @@ Ext.onReady(function() {
 				preventBodyReset:true,
 				region: 'south',
 				style: 'padding:5px;color:#15428b;font:bold 11px tahoma,arial,verdana,sans-serif;',
-				html: '<div style="background-color:#dfe8f6;"><center>Copyright 2009 <a href=\"http://www.cos-mos.co.jp/\" target=\"_blank\">Cosmos Inc.</a> All right reserved.</center></div>'
+				html: ''
 				
 			}
 		]
