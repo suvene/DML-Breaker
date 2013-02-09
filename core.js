@@ -30,6 +30,8 @@ function convertMain(targetSql) {
 	betweenFlg = false;
 	// UNION句の発生フラグ(true:発生、false:未発生)
 	unionFlg = false;
+  // inline view などで select が発生したときの parenthsis の値
+  cntMatchParens = [];
 
 	if ( targetSql == null ) {
 
@@ -176,7 +178,11 @@ function convertSelect() {
 
 			parenthesis--;
 
-			if ( parenthesis < 0 ) {
+			if (parenthesis == cntMatchParens[cntMatchParens.length - 1] - 1) {
+        wk = "\r\n" + tab + wk;
+        tab = tab.replace(/(.)*\t\t/, '$1');
+        cntMatchParens.pop();
+      } else if ( parenthesis < 0 ) {
 
 				convertSql += add;
 				add = "\r\n" + tab;
@@ -187,10 +193,14 @@ function convertSelect() {
 
 		add += wk;
 
-		if ( wk == "," && parenthesis == 0 ) {
+		if (wk == ",") {
 
-			convertSql += add;
-			add = "\r\n\t" + tab;
+      if (cntMatchParens.length == 0 || parenthesis == cntMatchParens[cntMatchParens.length - 1]) {
+			  convertSql += add;
+        add = "\r\n\t" + tab;
+      } else {
+        add += ' ';
+      }
 
 		} else if ( wk == "(" ) {
 
@@ -253,10 +263,14 @@ function convertSelect() {
 			add = "\r\n\t\t" + tab;
 			onCount = 1;
 
-		} else if ( add.match( /(^[\(])select /i ) != null ) {
+		//} else if ( add.match( /(^[\(])select /i ) != null ) {
+		} else if ( add.match( /select /i ) != null ) {
 
+      if (add.match(/\(/)) {
+        cntMatchParens.push(parenthesis);
+      }
 			startNo = i - 6;
-			parenthesis = 0;
+      if (!cntMatchParens.length) parenthesis = 0;
 			onCount = 0;
 			tab = tab.concat( "\t\t" );
 			convertSql += add.substring( 0, add.length - 7 ) + "\r\n" + tab;
@@ -272,13 +286,13 @@ function convertSelect() {
 				}
 
 				startNo = endNo + 1;
-				parenthesis = 0;
+        if (!cntMatchParens.length) parenthesis = 0;
 				onCount = 0;
 				add = "";
 			}
 
 			i = endNo;
-			parenthesis = 0;
+      if (!cntMatchParens) parenthesis = 0;
 			tab = tab.replace( "\t\t", "" );
 
 		} else if ( add.match( / group by | order by /i ) != null ) {
