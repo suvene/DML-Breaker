@@ -1,16 +1,12 @@
 [作品名]
-　DML Breaker
+　DML Breaker(suVene)
 　(Data Manipulation Language Breaker)
 
 [ライセンス]
 　GNU General Public License v3(GPLv3)
 
 [バージョン]
-　2.02
-
-[派生元著作権]
-　株式会社コスモス
-
+　1.00
 
 [動作確認済み環境]
 　Max OS X(10.6.8)
@@ -22,6 +18,10 @@
 　　・Google Chrome 4
 　　・Safari 4
 　　・Opera 10
+
+[派生元著作権]
+　DML Breaker - http://sourceforge.jp/projects/format-sql/
+　株式会社コスモス
 
 [DML Breaker uses the following libraries]
 　Ext JS Library 3.0.3 licensed under GPLv3 License
@@ -184,10 +184,12 @@
     INSERT INTO,IS,JOIN,LEFT,LIKE,NOT,ON,OR,ORDER BY,OUTER,RIGHT,SELECT,SET,SOME,UNION,UNION ALL
     UPDATE,USING,VALUES,WHERE
 
-[改訂履歴]
+[改訂履歴 DML Breaker(suVene)]
 2013.02.10 v2.02 bugfix
-2009.12.28 v2.01 一括整形機能によるRich Textの表示改善など
-2009.12.20 v2.00 バージョン２公開
-2009.11.24 v1.01 IE以外のブラウザで余分な行が出力される問題に対応
-2009.10.31 v1.00 バージョン１公開
+
+[改訂履歴 DML Breaker]
 2009.08.15 v0.10 初期バージョン公開
+2009.10.31 v1.00 バージョン１公開
+2009.11.24 v1.01 IE以外のブラウザで余分な行が出力される問題に対応
+2009.12.20 v2.00 バージョン２公開
+2009.12.28 v2.01 一括整形機能によるRich Textの表示改善など

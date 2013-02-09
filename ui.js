@@ -30,7 +30,7 @@ Ext.onReady(function() {
 
 	// パネルを作成
 	var inputPanel = new Ext.Panel({
-		title : 'DML Breaker -  2.02',
+		title : 'DML Breaker(suVene) -  1.00',
 		collapsible: true,
 		height: 200,
 		layout:'fit',
