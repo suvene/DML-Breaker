@@ -253,7 +253,7 @@ function convertSelect() {
 			add = "\r\n\t\t" + tab;
 			onCount = 1;
 
-		} else if ( add.match( /select /i ) != null ) {
+		} else if ( add.match( /(^[\(])select /i ) != null ) {
 
 			startNo = i - 6;
 			parenthesis = 0;
