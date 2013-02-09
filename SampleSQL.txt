@@ -8,7 +8,7 @@ SELECT * FROM Orders WHERE CustomerID IN ('QUICK', 'VINET');
 SELECT ProductID, Sum(Quantity) FROM OrderDetails" GROUP BY ProductID;
 SELECT ProductID, UnitPrice, Sum(Quantity) FROM OrderDetails GROUP BY ProductID;
 SELECT ProductID, UnitPrice, Sum(Quantity) FROM OrderDetails GROUP BY ProductID, UnitPrice;
-SELECT ProductID AS '»•iID', Sum(Quantity) AS 'ŒÂ”‡Œv' FROM OrderDetails GROUP BY ProductID HAVING Sum(Quantity) >= 100;
+SELECT ProductID AS 'è£½å“ID', Sum(Quantity) AS 'å€‹æ•°åˆè¨ˆ' FROM OrderDetails GROUP BY ProductID HAVING Sum(Quantity) >= 100;
 SELECT OrderID, Prd.ProductID, ProductName, Prd.UnitPrice, Quantity, Discount FROM OrderDetails Ord INNER JOIN Products Prd ON Ord.ProductID=Prd.ProductID;
 SELECT * FROM Customers WHERE CustomerID = 'ALFKI' OR CustomerID = 'ANATR' OR CustomerID = 'ANTON';
 SELECT * FROM Customers WHERE CustomerID IN (SELECT Distinct(CustomerID) FROM Orders);

@@ -1,129 +1,129 @@
-[��i��]
-�@DML Breaker(suVene)
-�@(Data Manipulation Language Breaker)
+[作品名]
+　DML Breaker(suVene)
+　(Data Manipulation Language Breaker)
 
-[���C�Z���X]
-�@GNU General Public License v3(GPLv3)
+[ライセンス]
+　GNU General Public License v3(GPLv3)
 
-[�o�[�W����]
-�@1.00
+[バージョン]
+　1.00
 
-[����m�F�ς݊�]
-�@Max OS X(10.6.8)
+[動作確認済み環境]
+　Max OS X(10.6.8)
 
-[OS�A�z�z�t�@�C���ȊO�ɕK�v�ȃ\�t�g]
-�@Web�u���E�U(�ȉ��̃u���E�U�œ���m�F��)
-�@�@�EInternet Exproler 6/7/8
-�@�@�EFirefox 3.5
-�@�@�EGoogle Chrome 4
-�@�@�ESafari 4
-�@�@�EOpera 10
+[OS、配布ファイル以外に必要なソフト]
+　Webブラウザ(以下のブラウザで動作確認済)
+　　・Internet Exproler 6/7/8
+　　・Firefox 3.5
+　　・Google Chrome 4
+　　・Safari 4
+　　・Opera 10
 
-[�h�������쌠]
-�@DML Breaker - http://sourceforge.jp/projects/format-sql/
-�@������ЃR�X���X
+[派生元著作権]
+　DML Breaker - http://sourceforge.jp/projects/format-sql/
+　株式会社コスモス
 
 [DML Breaker uses the following libraries]
-�@Ext JS Library 3.0.3 licensed under GPLv3 License
-�@licensing@extjs.com
-�@http://www.extjs.com/license
+　Ext JS Library 3.0.3 licensed under GPLv3 License
+　licensing@extjs.com
+　http://www.extjs.com/license
  
-[��i�Љ�]
-�@SQL���̂����ADML(SELECT/INSERT/UPDATE/DELETE)����͂��A
-�@�l�����₷��DML�ɕϊ�����c�[���ł��B�݌v�����ɓ]�L����ꍇ�ɂ����p���������B
-�@�Ȃ��ADML�̍\����͋@�\�͎�������Ă���܂���̂ł��������������B
+[作品紹介]
+　SQL文のうち、DML(SELECT/INSERT/UPDATE/DELETE)を解析し、
+　人が見やすいDMLに変換するツールです。設計書等に転記する場合にご利用ください。
+　なお、DMLの構文解析機能は実装されておりませんのでご了承ください。
 
-[�����菇]
-�@�@ �C���X�g�[���́A�_�E�����[�h�t�@�C��(DMLBreakerX.X.zip)��C�ӂ̃f�B���N�g���ɉ𓀂��邱�ƂŏI�����܂��B
+[導入手順]
+　① インストールは、ダウンロードファイル(DMLBreakerX.X.zip)を任意のディレクトリに解凍することで終了します。
 
-[��{�g�p�菇]
-�@�@ DMLBreaker.html ���_�u���N���b�N���܂��B
-�@�A ��i���̃e�L�X�g���̓G���A��DML����͂��܂��B
-�@�B ��ʒ����́u�ϊ��v�{�^�����������܂��B
-�@�C ���i���̃e�L�X�g���̓G���A�ɁA�ϊ����DML���o�͂���܂��B
-�@�D �ϊ����DML��I�����A���̐݌v�����̃h�L�������g�Ɂu�\��t���v���s���܂��B
+[基本使用手順]
+　① DMLBreaker.html をダブルクリックします。
+　② 上段側のテキスト入力エリアにDMLを入力します。
+　③ 画面中央の「変換」ボタンを押下します。
+　④ 下段側のテキスト入力エリアに、変換後のDMLが出力されます。
+　⑤ 変換後のDMLを選択し、他の設計書等のドキュメントに「貼り付け」を行います。
 
-[��ȓ���]
-�@- DML(SELECT/INSERT/UPDATE/DELETE)���T�|�[�g���܂��B
-�@- �R�V��ނ�SQL�L�[���[�h�̑啶���ϊ����T�|�[�g���܂��B
-�@- ���[�J�����œ��삪�������܂��B
-�@- �N���b�v�{�[�h���o�R�����ADML�e�L�X�g�̓��o�͂ɑΉ����܂�(IE����@�\)
-�@- �Z�~�R�����u;�v�ŁA������DML����؂邱�Ƃɂ��A�ꊇ���ĕϊ����邱�Ƃ��ł��܂��B
-�@- ������JavaScript+HTML�ōs���Ă��܂��B
+[主な特徴]
+　- DML(SELECT/INSERT/UPDATE/DELETE)をサポートします。
+　- ３７種類のSQLキーワードの大文字変換をサポートします。
+　- ローカル環境で動作が完結します。
+　- クリップボードを経由した、DMLテキストの入出力に対応します(IE限定機能)
+　- セミコロン「;」で、複数のDMLを区切ることにより、一括して変換することができます。
+　- 実装はJavaScript+HTMLで行っています。
 
-[DML�ϊ��G���W���̎d�l]
-  - SQL�\����Oracle�Ђ�Database�ɑΉ�����DML����{�Ƃ��܂��B
-�@- �������i�C���f���g�j�́A4�����̔��p�X�y�[�X�ōs���܂��B
-�@- �֐��͑啶���ϊ����܂���B
-�@- ���񋓂���ۂɗ��p����J���}(,)�́A�s�̌���ɏo�͂��܂��B
-�@�@�T�u�N�G�����Ή����܂��B
-�@- WHERE��̍������J�����ɃC���f���g�𑵂��܂��B
-�@- ���`�d�l�͎��̒ʂ�ł��B
-�@�@<SELECT>
-        SELECT�\���F(���₢���킹)
-�@�@�@�@�@���s�L�[���[�h�FSELECT, FROM��, WHERE��, GROUP BY��, ORDER BY��, HAVING��, UNION ALL
+[DML変換エンジンの仕様]
+  - SQL構文はOracle社のDatabaseに対応するDMLを基本とします。
+　- 字下げ（インデント）は、4文字の半角スペースで行います。
+　- 関数は大文字変換しません。
+　- 列を列挙する際に利用するカンマ(,)は、行の後方に出力します。
+　　サブクエリも対応します。
+　- WHERE句の左条件カラムにインデントを揃えます。
+　- 整形仕様は次の通りです。
+　　<SELECT>
+        SELECT構文：(副問い合わせ)
+　　　　　改行キーワード：SELECT, FROM句, WHERE句, GROUP BY句, ORDER BY句, HAVING句, UNION ALL
 
-�@�@�@�@�@(�ϊ��O)
-�@�@�@�@�@�@SELECT CustomerID, CompanyName FROM Customers WHERE CustomerID = '00001' AND CustomerName LIKE '�R�c%' 
+　　　　　(変換前)
+　　　　　　SELECT CustomerID, CompanyName FROM Customers WHERE CustomerID = '00001' AND CustomerName LIKE '山田%' 
 
-�@�@�@�@�@(�ϊ���)
-        �@�@SELECT
-        �@�@    CustomerID,
-        �@�@    CompanyName
-        �@�@FROM
-        �@�@    Customers
-        �@�@WHERE
-        �@�@        CustomerID = '00001'
-        �@�@    AND CustomerName LIKE '�R�c%'
+　　　　　(変換後)
+        　　SELECT
+        　　    CustomerID,
+        　　    CompanyName
+        　　FROM
+        　　    Customers
+        　　WHERE
+        　　        CustomerID = '00001'
+        　　    AND CustomerName LIKE '山田%'
 
     <INSERT>
-        INSERT�\���P�F
-�@�@�@�@�@(�ϊ��O)
+        INSERT構文１：
+　　　　　(変換前)
             INSERT INTO Customers (CustomerID, CompanyName) VALUES ('10001' , 'COSMOS')
 
-�@�@�@�@�@(�ϊ���)
-        �@�@INSERT INTO Customers (
-        �@�@    CustomerID,
-        �@�@    CompanyName
-        �@�@)
-        �@�@VALUES (
-         �@�@   '10001' ,
-        �@�@    'COSMOS'
-        �@�@)
+　　　　　(変換後)
+        　　INSERT INTO Customers (
+        　　    CustomerID,
+        　　    CompanyName
+        　　)
+        　　VALUES (
+         　　   '10001' ,
+        　　    'COSMOS'
+        　　)
 
 
-        INSERT�\���Q�F
-�@�@�@�@�@(�ϊ��O)
+        INSERT構文２：
+　　　　　(変換前)
             INSERT INTO OrgCustomers SELECT CustomerID, CompanyName FROM Customers WHERE CustomerID = '00001'
 
-�@�@�@�@�@(�ϊ���)
-        �@�@INSERT INTO OrgCustomers
-        �@�@SELECT
-         �@�@   CustomerID,
-         �@�@   CompanyName
-        �@�@FROM
-        �@�@   Customers
-        �@�@WHERE
-        �@�@        CustomerID = '00001'
+　　　　　(変換後)
+        　　INSERT INTO OrgCustomers
+        　　SELECT
+         　　   CustomerID,
+         　　   CompanyName
+        　　FROM
+        　　   Customers
+        　　WHERE
+        　　        CustomerID = '00001'
 
     <UPDATE>
-        UPDATE�\���P�F
-�@�@�@�@�@(�ϊ��O)
-            UPDATE Customers SET CompanyName = 'COSMOS', RepName = '���{' WHERE CustomerID = '101000'
+        UPDATE構文１：
+　　　　　(変換前)
+            UPDATE Customers SET CompanyName = 'COSMOS', RepName = '松本' WHERE CustomerID = '101000'
 
-�@�@�@�@�@(�ϊ���)
+　　　　　(変換後)
             UPDATE Customers SET
                 CompanyName = 'COSMOS',
-                RepName = '���{'
+                RepName = '松本'
             WHERE
                     CustomerID = '101000'
 
 
-        UPDATE�\���Q�F
-�@�@�@�@�@(�ϊ��O)
+        UPDATE構文２：
+　　　　　(変換前)
             UPDATE Customers SET CompanyName = (SELECT CompanyName FROM OrgCustomers WHERE CustomerID = '101000')
 
-�@�@�@�@�@(�ϊ���)
+　　　　　(変換後)
             UPDATE Customers SET
                 CompanyName = (
                     SELECT
@@ -135,11 +135,11 @@
                 )
 
 
-        UPDATE�\���R�F
-�@�@�@�@�@(�ϊ��O)
+        UPDATE構文３：
+　　　　　(変換前)
             UPDATE Customers SET (CustomerID, CompanyName) = (SELECT CustomerID , CompanyName FROM OrgCustomers WHERE CustomerID = '101000'
 
-�@�@�@�@�@(�ϊ���)
+　　　　　(変換後)
             UPDATE Customers SET
                 (CustomerID, CompanyName) = (
                     SELECT
@@ -152,20 +152,20 @@
 
 
     <DELETE>
-        DELETE�\���P�F
-�@�@�@�@�@(�ϊ��O)
+        DELETE構文１：
+　　　　　(変換前)
             DELETE FROM Customers WHERE CustomerID = '101000'
 
-�@�@�@�@�@(�ϊ���)
+　　　　　(変換後)
             DELETE FROM Customers
             WHERE
                     CustomerID = '101000'
 
-        DELETE�\���Q�F
-�@�@�@�@�@(�ϊ��O)
+        DELETE構文２：
+　　　　　(変換前)
             DELETE FROM Customers WHERE CompanyName = (SELECT CompanyName FROM OrgCustomers WHERE CustomerID = '101000')
 
-�@�@�@�@�@(�ϊ���)
+　　　　　(変換後)
             DELETE FROM Customers
             WHERE
                     CompanyName = (
@@ -179,17 +179,17 @@
 
 
 
-�@- �啶���ϊ��L�[���[�h37��͈ȉ��̒ʂ�ł��B
+　- 大文字変換キーワード37種は以下の通りです。
     ALL,AND,ANY,AS,ASC,BETWEEN,CROSS,DELETE,DESC,DISTINCT,EXISTS,FROM,FULL,GROUP BY,HAVING,IN,INNER
     INSERT INTO,IS,JOIN,LEFT,LIKE,NOT,ON,OR,ORDER BY,OUTER,RIGHT,SELECT,SET,SOME,UNION,UNION ALL
     UPDATE,USING,VALUES,WHERE
 
-[�������� DML Breaker(suVene)]
-2013.02.10 v2.02 bugfix
+[改訂履歴 DML Breaker(suVene)]
+2013.02.10 v1.00 bugfix
 
-[�������� DML Breaker]
-2009.08.15 v0.10 �����o�[�W�������J
-2009.10.31 v1.00 �o�[�W�����P���J
-2009.11.24 v1.01 IE�ȊO�̃u���E�U�ŗ]���ȍs���o�͂������ɑΉ�
-2009.12.20 v2.00 �o�[�W�����Q���J
-2009.12.28 v2.01 �ꊇ���`�@�\�ɂ��Rich Text�̕\�����P�Ȃ�
+[改訂履歴 DML Breaker]
+2009.08.15 v0.10 初期バージョン公開
+2009.10.31 v1.00 バージョン１公開
+2009.11.24 v1.01 IE以外のブラウザで余分な行が出力される問題に対応
+2009.12.20 v2.00 バージョン２公開
+2009.12.28 v2.01 一括整形機能によるRich Textの表示改善など
