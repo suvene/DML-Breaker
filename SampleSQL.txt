@@ -1,0 +1,18 @@
+SELECT A.COUNT_TOTAL,B.COUNT_TODAY,C.COUNT_YESTERDAY FROM (SELECT COUNT(*) AS COUNT_TOTAL FROM TEST_LOG WHERE ID = '123' AND ACCESSDATE > DATE 'TODAY' - INTEGER '90') AS A, (SELECT COUNT(*) AS COUNT_TODAY FROM TEST_LOG WHERE ID = '123' AND ACCESSDATE >= 'TODAY') AS B, (SELECT COUNT(*) AS COUNT_YESTERDAY FROM TEST_LOG WHERE ID = '123' AND (ACCESSDATE >= 'YESTERDAY' AND ACCESSDATE < 'TODAY')) AS C;
+SELECT CustomerID, CompanyName FROM Customers;
+SELECT * FROM Customers;
+SELECT CustomerID, CompanyName, City FROM Customers WHERE City = 'London';
+SELECT * FROM Orders WHERE CustomerID = 'QUICK' AND OrderDate > '1998/1/1';
+SELECT * FROM Orders WHERE CustomerID = 'QUICK' AND OrderDate BETWEEN '1996/1/1' AND '1997/12/31';
+SELECT * FROM Orders WHERE CustomerID IN ('QUICK', 'VINET');
+SELECT ProductID, Sum(Quantity) FROM OrderDetails" GROUP BY ProductID;
+SELECT ProductID, UnitPrice, Sum(Quantity) FROM OrderDetails GROUP BY ProductID;
+SELECT ProductID, UnitPrice, Sum(Quantity) FROM OrderDetails GROUP BY ProductID, UnitPrice;
+SELECT ProductID AS '»•iID', Sum(Quantity) AS 'ŒÂ”‡Œv' FROM OrderDetails GROUP BY ProductID HAVING Sum(Quantity) >= 100;
+SELECT OrderID, Prd.ProductID, ProductName, Prd.UnitPrice, Quantity, Discount FROM OrderDetails Ord INNER JOIN Products Prd ON Ord.ProductID=Prd.ProductID;
+SELECT * FROM Customers WHERE CustomerID = 'ALFKI' OR CustomerID = 'ANATR' OR CustomerID = 'ANTON';
+SELECT * FROM Customers WHERE CustomerID IN (SELECT Distinct(CustomerID) FROM Orders);
+SELECT * FROM Products WHERE UnitPrice > ANY (SELECT UnitPrice FROM OrderDetails);
+SELECT * FROM Products Prod1 WHERE Prod1.UnitPrice > ALL(SELECT UnitPrice FROM Products Prod2 WHERE Prod1.ProductID <> Prod2.ProductID);
+SELECT ProductID, ProductName, UnitPrice FROM Products Prod1 WHERE 5 > (SELECT Count(*) FROM Products Prod2 WHERE Prod1.UnitPrice < Prod2.UnitPrice) ORDER BY UnitPrice DESC;
+SELECT ProductName, UnitPrice FROM Products UNION ALL SELECT distinct prod.ProductName, ordd.UnitPrice FROM OrderDetails ordd INNER JOIN Products prod ON ordd.ProductID = prod.ProductID ORDER BY ProductName, UnitPrice;
