@@ -6,7 +6,7 @@
 　GNU General Public License v3(GPLv3)
 
 [バージョン]
-　1.00
+　1.01
 
 [動作確認済み環境]
 　Max OS X(10.6.8)
@@ -184,12 +184,14 @@
     INSERT INTO,IS,JOIN,LEFT,LIKE,NOT,ON,OR,ORDER BY,OUTER,RIGHT,SELECT,SET,SOME,UNION,UNION ALL
     UPDATE,USING,VALUES,WHERE
 
-[改訂履歴 DML Breaker(suVene)]
-2013.02.10 v1.00 bugfix
-
 [改訂履歴 DML Breaker]
 2009.08.15 v0.10 初期バージョン公開
 2009.10.31 v1.00 バージョン１公開
 2009.11.24 v1.01 IE以外のブラウザで余分な行が出力される問題に対応
 2009.12.20 v2.00 バージョン２公開
 2009.12.28 v2.01 一括整形機能によるRich Textの表示改善など
+
+[改訂履歴 DML Breaker(suVene)]
+2013.02.10 v1.0.0 bugfix
+2013.02.10 v1.0.1 インデント修正
+
