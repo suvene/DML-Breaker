@@ -184,6 +184,10 @@ function convertSelect() {
         wk = "\r\n" + tab + wk;
         tab = tab.replace(/(.)*\t\t/, '$1');
         cntMatchParens.pop();
+        if (cntMatchParens.length == 0) {
+          tab = "";
+        }
+
       } else if (parenthesis < 0) {
 
         convertSql += add;
