@@ -32,6 +32,8 @@ function convertMain(targetSql) {
 	unionFlg = false;
   // inline view などで select が発生したときの parenthsis の値
   cntMatchParens = [];
+  // From句、Join句、Where句の最初を改行しない(Optionにするかも)
+  flgNoBRFromJoinWhere = true;
 
 	if ( targetSql == null ) {
 
@@ -230,37 +232,62 @@ function convertSelect() {
 		} else if ( add.match( / from /i ) != null ) {
 
 			convertSql += add.substring( 0, add.length - 5 ) + "\r\n" + tab + add.slice( -5 );
-			add = "\r\n\t" + tab;
+      if (flgNoBRFromJoinWhere) {
+			  add = " ";
+      } else {
+        add = "\r\n\t" + tab;
+      }
 
 		} else if ( add.match( / where /i ) != null ) {
 
 			convertSql += add.substring( 0, add.length - 6 ) + "\r\n" + tab + add.slice( -6 );
-			add = "\r\n\t\t" + tab;
+      if (flgNoBRFromJoinWhere) {
+			  add = " ";
+      } else {
+			  add = "\r\n\t\t" + tab;
+      }
 
 		} else if ( add.match( / inner join | right join /i ) != null ) {
 
 			convertSql += add.substring( 0, add.length - 11 ) + "\r\n" + tab +  add.slice( -11 );
-			add = "\r\n\t" + tab;
+      if (flgNoBRFromJoinWhere) {
+			  add = " ";
+      } else {
+			  add = "\r\n\t" + tab;
+      }
 
 		} else if ( add.match( / left join /i ) != null ) {
 
 			convertSql += add.substring( 0, add.length - 10 ) + "\r\n" + tab +  add.slice( -10 );
-			add = "\r\n\t" + tab;
+      if (flgNoBRFromJoinWhere) {
+			  add = " ";
+      } else {
+			  add = "\r\n\t" + tab;
+      }
 
 		} else if ( add.match( / right outer join /i ) != null ) {
 
 			convertSql += add.substring( 0, add.length - 17 ) + "\r\n" + tab +  add.slice( -17 );
-			add = "\r\n\t" + tab;
+      if (flgNoBRFromJoinWhere) {
+			  add = " ";
+      } else {
+			  add = "\r\n\t" + tab;
+      }
 
 		} else if ( add.match( / left outer join /i ) != null ) {
 
 			convertSql += add.substring( 0, add.length - 16 ) + "\r\n" + tab +  add.slice( -16 );
 			add = "\r\n\t" + tab;
+			add = " ";
 
 		} else if ( add.match( / on /i ) != null ) {
 
-			convertSql += add.substring( 0, add.length - 3 ) + "\r\n" + tab +  add.slice( -3 );
-			add = "\r\n\t\t" + tab;
+			convertSql += add.substring( 0, add.length - 3 ) + "\r\n" + tab + '   ' + add.slice( -3 );
+      if (flgNoBRFromJoinWhere) {
+			  add = " ";
+      } else {
+			  add = "\r\n\t\t" + tab;
+      }
 			onCount = 1;
 
 		//} else if ( add.match( /(^[\(])select /i ) != null ) {
