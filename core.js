@@ -182,7 +182,7 @@ function convertSelect() {
 
       if (parenthesis == cntMatchParens[cntMatchParens.length - 1] - 1) {
         wk = "\r\n" + tab + wk;
-        tab = tab.replace(/(.)*\t\t/, '$1');
+        tab = tab.replace(/(.*)\t\t$/, '$1');
         cntMatchParens.pop();
         if (cntMatchParens.length == 0) {
           tab = "";
@@ -201,7 +201,8 @@ function convertSelect() {
 
     if (wk == ",") {
 
-      if (cntMatchParens.length == 0 || parenthesis == cntMatchParens[cntMatchParens.length - 1]) {
+      if ((cntMatchParens.length == 0 && parenthesis == 0) ||
+          parenthesis == cntMatchParens[cntMatchParens.length - 1]) {
         convertSql += add;
         add = "\r\n\t" + tab;
       } else {
