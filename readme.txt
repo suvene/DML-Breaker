@@ -6,7 +6,7 @@
 　GNU General Public License v3(GPLv3)
 
 [バージョン]
-　1.01
+　1.03
 
 [動作確認済み環境]
 　Max OS X(10.6.8)
@@ -19,7 +19,7 @@
 　　・Safari 4
 　　・Opera 10
 
-[派生元著作権]
+[Source]
 　DML Breaker - http://sourceforge.jp/projects/format-sql/
 　株式会社コスモス
 
@@ -27,7 +27,7 @@
 　Ext JS Library 3.0.3 licensed under GPLv3 License
 　licensing@extjs.com
 　http://www.extjs.com/license
- 
+
 [作品紹介]
 　SQL文のうち、DML(SELECT/INSERT/UPDATE/DELETE)を解析し、
 　人が見やすいDMLに変換するツールです。設計書等に転記する場合にご利用ください。
@@ -37,7 +37,7 @@
 　① インストールは、ダウンロードファイル(DMLBreakerX.X.zip)を任意のディレクトリに解凍することで終了します。
 
 [基本使用手順]
-　① DMLBreaker.html をダブルクリックします。
+　① index.html をダブルクリックします。
 　② 上段側のテキスト入力エリアにDMLを入力します。
 　③ 画面中央の「変換」ボタンを押下します。
 　④ 下段側のテキスト入力エリアに、変換後のDMLが出力されます。
@@ -195,4 +195,5 @@
 2013.02.10 v1.0.0 bugfix
 2013.02.10 v1.0.1 インデント修正
 2014.02.10 v1.0.2 インデント修正
+2014.02.10 v1.0.3 インデント修正
 
